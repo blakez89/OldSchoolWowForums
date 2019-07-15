@@ -1,0 +1,3 @@
+export const lorum = 'Aliquam erat volutpat. Donec a ante et mi faucibus tempor. Curabitur a blandit lacus'
+
+export const ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lectus quam. Maecenas id dui tempor diam aliquam imperdiet. In vel placerat enim. Donec congue dapibus vestibulum. Curabitur interdum congue ante, nec dapibus felis gravida sit amet. Aliquam suscipit leo turpis, a ornare odio consectetur ut. Sed consequat est risus, et malesuada elit dapibus et. Phasellus iaculis hendrerit accumsan. Mauris imperdiet enim eu nunc accumsan aliquet id nec sapien. Maecenas et eros in neque vulputate fermentum.'
