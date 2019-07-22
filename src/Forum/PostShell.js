@@ -68,7 +68,9 @@ const classes = useStyles()
             </TableRow>
 
           <TableRow style={{height: '90%'}}>
+
             <StyledTableCell style={{color: 'silver'}} > {ipsum} </StyledTableCell>
+            
           </TableRow>
         </TableBody>
       </Table>

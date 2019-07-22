@@ -6,8 +6,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Radio from '@material-ui/core/Radio';
 import Paper from '@material-ui/core/Paper';
-
- const useStyles = makeStyles(theme =>  ({
+import Druid from './icons/DruidM.gif'
+import Priest from './icons/Priest.gif'
+ const styles = {
 
   wrapper: { 
     display: 'grid',
@@ -15,10 +16,9 @@ import Paper from '@material-ui/core/Paper';
     width: '6vw',
     height: '5vw',
     color: 'white',
+
     minWidth: '-webkit-min-content',
     minHeight:'-webkit-min-content',
-
-    backgroundColor: 'black',
     marginRight: '.5vw'
   }, 
   
@@ -27,39 +27,35 @@ import Paper from '@material-ui/core/Paper';
     gridColumnEnd: '2',
     gridRowStart: '1', 
     gridRowEnd: '4',
-    borderRight: '2px solid grey',
-    borderTop: '2px solid grey',
-    borderBottom: '2px solid grey',
-    position: 'relative'
-    
+    position: 'relative',
+    border: '2px solid red',
+    backgroundImage: `url(${Priest})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% 100%'
   }
   ,
   box2: { 
    gridColumnStart: '1',
-   border: '2px solid grey',
+   border: '2px solid green',
   }
  
 
-}));
+};
 
 export default function CSSGrid(props) {
-  const classes = useStyles();
 
   return (
     
-    <div className={classes.wrapper}>
-      <div className={classes.box2}>x</div>
-      <div className={classes.box2} style={{borderTop:'0px',borderBottom:'0px'}}>y</div>
-      <div className={classes.box2}>z</div>
-      {/* Default Props here */}
-      <div className={classes.box1}>
-
-
-      {props.name? props.name : 'bob'}
-    <div style={{position:'absolute',bottom:'0',right:'0'}}>
+    <div style={styles.wrapper}>
+      <div style={styles.box2}>x</div>
+      <div style={{...styles.box2,borderTop:'0px',borderBottom:'0px'}}>y</div>
+      <div style={styles.box2}>z</div>
+      <div style={styles.box1}>
+      <div style={{position:'absolute',bottom:'0',right:'0'}}>
       
       60
       </div>
+         
     </div>
 </div>
   );

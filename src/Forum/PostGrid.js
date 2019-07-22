@@ -1,8 +1,9 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid';
 import {default as PostShell} from './PostShell'
-import {default as PortraitPanel} from './PortraitPanel'
 import { makeStyles } from "@material-ui/core/styles";
+
+import {slugs} from './sampleJson/wowForumJson'
 //make the post shells have a little padding and alternating backgrounds
 export const PostGrid = () => {
 const useStyles = makeStyles(theme => ({
@@ -22,13 +23,13 @@ const useStyles = makeStyles(theme => ({
   const classes = useStyles()
 
 
-    const chars = ["Undead Warrior","Human Paladin","Orc Hunter","Night Elf Rogue"]
+   
 
-    const charMap = chars.map(char=>{
+    const charMap = slugs.map(char=>{
+        const {name,wowClass,guildName,Server} = char
         return(
-       
-        <Grid className={classes.item} item={true} key={char}>
-        <PostShell name={char}/>
+        <Grid className={classes.item} item={true} key={name}>
+        <PostShell slug={char}/>
         </Grid>
       
         )
